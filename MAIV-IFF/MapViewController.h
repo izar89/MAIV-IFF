@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AFNetworking.h>
+
 #import "MapView.h"
 #import "MapBoxView.h"
 

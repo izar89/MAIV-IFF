@@ -10,4 +10,6 @@
 
 @interface StartView : UIView
 
+@property(strong, nonatomic)UIButton *btnStart;
+
 @end

@@ -38,6 +38,12 @@
 -(void)loadView{
     CGRect bounds = [[UIScreen mainScreen] bounds];
     self.view = [[StartView alloc] initWithFrame:bounds];
+    [self.view.btnStart addTarget:self action:@selector(btnStartTapped:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)btnStartTapped:(id)sender{
+    SoldierViewController *soldierVC = [[SoldierViewController alloc] init];
+    [self.navigationController pushViewController:soldierVC animated:YES];
 }
 
 /*

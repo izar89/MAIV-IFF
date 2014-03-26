@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AFNetworking.h>
 #import "StartView.h"
+#import "SoldierViewController.h"
 
 @interface StartViewController : UIViewController
 

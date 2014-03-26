@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "SoldierView.h"
+#import "CameraView.h"
 
-@interface SoldierViewController : UIViewController
+@interface SoldierViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
+//SoldierView
 @property(strong, nonatomic)SoldierView *view;
+
+//CameraView
+@property(strong, nonatomic)CameraView *cameraView;
+@property(strong, nonatomic)UIImagePickerController *imagePickerController;
 
 @end

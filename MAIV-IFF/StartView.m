@@ -15,7 +15,11 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [UIColor blueColor];
+        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"start.png"]];
+        
+        self.btnStart = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.btnStart.frame = frame;
+        [self addSubview:self.btnStart];
     }
     return self;
 }
