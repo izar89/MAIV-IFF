@@ -1,0 +1,16 @@
+//
+//  SoldierViewController.h
+//  MAIV-IFF
+//
+//  Created by Stijn Heylen on 26/03/14.
+//  Copyright (c) 2014 Stijn Heylen. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "SoldierView.h"
+
+@interface SoldierViewController : UIViewController
+
+@property(strong, nonatomic)SoldierView *view;
+
+@end

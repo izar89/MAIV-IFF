@@ -1,18 +1,18 @@
 //
-//  MapBoxViewController.m
+//  StartViewController.m
 //  MAIV-IFF
 //
-//  Created by Stijn Heylen on 24/03/14.
+//  Created by Stijn Heylen on 26/03/14.
 //  Copyright (c) 2014 Stijn Heylen. All rights reserved.
 //
 
-#import "MapBoxViewController.h"
+#import "StartViewController.h"
 
-@interface MapBoxViewController ()
+@interface StartViewController ()
 
 @end
 
-@implementation MapBoxViewController
+@implementation StartViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,7 +37,7 @@
 
 -(void)loadView{
     CGRect bounds = [[UIScreen mainScreen] bounds];
-    self.view = [[MapBoxView alloc] initWithFrame:bounds];
+    self.view = [[StartView alloc] initWithFrame:bounds];
 }
 
 /*

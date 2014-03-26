@@ -14,8 +14,9 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    MapBoxViewController *mapBoxVC = [[MapBoxViewController alloc] init];
-    self.navController = [[UINavigationController alloc] initWithRootViewController:mapBoxVC];
+    StartViewController *startVC = [[StartViewController alloc] init];
+    self.navController = [[UINavigationController alloc] initWithRootViewController:startVC];
+    self.navController.navigationBarHidden = YES;
     self.window.rootViewController = self.navController;
 
     self.window.backgroundColor = [UIColor whiteColor];

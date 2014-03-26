@@ -16,11 +16,16 @@
     if (self) {
         // Initialization code
         RMMapboxSource *source = [[RMMapboxSource alloc] initWithMapID:@"stijnheylen.hk12j1bl"];
-        self.mapView = [[RMMapView alloc] initWithFrame:frame andTilesource:source centerCoordinate:CLLocationCoordinate2DMake(50.8798, 2.9003) zoomLevel:12 maxZoomLevel:20 minZoomLevel:11 backgroundImage:nil];
+        self.mapView = [[RMMapView alloc] initWithFrame:frame andTilesource:source centerCoordinate:CLLocationCoordinate2DMake(50.8798, 2.9003) zoomLevel:15 maxZoomLevel:20 minZoomLevel:8 backgroundImage:nil];
         [self addSubview:self.mapView];
     }
     return self;
 }
+
+-(void)updateWithRoutecoords:(NSArray *)routecoords{
+    [self.mapView addAnnotations:routecoords];
+}
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

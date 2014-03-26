@@ -19,7 +19,14 @@
 		12B2E93D18E0B49D00E5EB29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12B2E92518E0B49D00E5EB29 /* UIKit.framework */; };
 		12B2E94518E0B49D00E5EB29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12B2E94318E0B49D00E5EB29 /* InfoPlist.strings */; };
 		12B2E94718E0B49D00E5EB29 /* MAIV_IFFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B2E94618E0B49D00E5EB29 /* MAIV_IFFTests.m */; };
-		12FA694618E0D8DC0049DA58 /* MapBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FA694518E0D8DC0049DA58 /* MapBoxViewController.m */; };
+		12F9DF9418E29A3200A63E1C /* StartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DF9318E29A3200A63E1C /* StartView.m */; };
+		12F9DF9718E29BEA00A63E1C /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DF9618E29BEA00A63E1C /* StartViewController.m */; };
+		12F9DF9A18E2A04D00A63E1C /* SoldierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DF9918E2A04D00A63E1C /* SoldierViewController.m */; };
+		12F9DF9D18E2A06200A63E1C /* SoldierView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DF9C18E2A06200A63E1C /* SoldierView.m */; };
+		12F9DFA518E2A30400A63E1C /* BackpackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFA418E2A30400A63E1C /* BackpackView.m */; };
+		12F9DFA818E2A31B00A63E1C /* BackpackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFA718E2A31B00A63E1C /* BackpackViewController.m */; };
+		12F9DFAB18E2A42000A63E1C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFAA18E2A42000A63E1C /* MapViewController.m */; };
+		12F9DFAE18E2A43A00A63E1C /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFAD18E2A43A00A63E1C /* MapView.m */; };
 		12FA694918E0D9140049DA58 /* MapBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FA694818E0D9140049DA58 /* MapBoxView.m */; };
 		BCE60ECA424844318066FB4E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A99E17856944428C5571D6 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -51,10 +58,22 @@
 		12B2E94218E0B49D00E5EB29 /* MAIV-IFFTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MAIV-IFFTests-Info.plist"; sourceTree = "<group>"; };
 		12B2E94418E0B49D00E5EB29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		12B2E94618E0B49D00E5EB29 /* MAIV_IFFTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAIV_IFFTests.m; sourceTree = "<group>"; };
-		12BD2D4518E0BB370057DA43 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		12BD2D4718E0BBB20057DA43 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		12FA694418E0D8DC0049DA58 /* MapBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapBoxViewController.h; sourceTree = "<group>"; };
-		12FA694518E0D8DC0049DA58 /* MapBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapBoxViewController.m; sourceTree = "<group>"; };
+		12F9DF9218E29A3200A63E1C /* StartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartView.h; sourceTree = "<group>"; };
+		12F9DF9318E29A3200A63E1C /* StartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartView.m; sourceTree = "<group>"; };
+		12F9DF9518E29BEA00A63E1C /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		12F9DF9618E29BEA00A63E1C /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		12F9DF9818E2A04D00A63E1C /* SoldierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoldierViewController.h; sourceTree = "<group>"; };
+		12F9DF9918E2A04D00A63E1C /* SoldierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoldierViewController.m; sourceTree = "<group>"; };
+		12F9DF9B18E2A06200A63E1C /* SoldierView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoldierView.h; sourceTree = "<group>"; };
+		12F9DF9C18E2A06200A63E1C /* SoldierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoldierView.m; sourceTree = "<group>"; };
+		12F9DFA318E2A30400A63E1C /* BackpackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackpackView.h; sourceTree = "<group>"; };
+		12F9DFA418E2A30400A63E1C /* BackpackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackpackView.m; sourceTree = "<group>"; };
+		12F9DFA618E2A31B00A63E1C /* BackpackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackpackViewController.h; sourceTree = "<group>"; };
+		12F9DFA718E2A31B00A63E1C /* BackpackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackpackViewController.m; sourceTree = "<group>"; };
+		12F9DFA918E2A42000A63E1C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		12F9DFAA18E2A42000A63E1C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		12F9DFAC18E2A43A00A63E1C /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
+		12F9DFAD18E2A43A00A63E1C /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
 		12FA694718E0D9140049DA58 /* MapBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapBoxView.h; sourceTree = "<group>"; };
 		12FA694818E0D9140049DA58 /* MapBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapBoxView.m; sourceTree = "<group>"; };
 		41A99E17856944428C5571D6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,8 +128,6 @@
 		12B2E92018E0B49D00E5EB29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				12BD2D4718E0BBB20057DA43 /* CoreLocation.framework */,
-				12BD2D4518E0BB370057DA43 /* MapKit.framework */,
 				12B2E92118E0B49D00E5EB29 /* Foundation.framework */,
 				12B2E92318E0B49D00E5EB29 /* CoreGraphics.framework */,
 				12B2E92518E0B49D00E5EB29 /* UIKit.framework */,
@@ -127,10 +144,10 @@
 				12B2E93118E0B49D00E5EB29 /* AppDelegate.m */,
 				12B2E93318E0B49D00E5EB29 /* Images.xcassets */,
 				12B2E92818E0B49D00E5EB29 /* Supporting Files */,
-				12FA694418E0D8DC0049DA58 /* MapBoxViewController.h */,
-				12FA694518E0D8DC0049DA58 /* MapBoxViewController.m */,
-				12FA694718E0D9140049DA58 /* MapBoxView.h */,
-				12FA694818E0D9140049DA58 /* MapBoxView.m */,
+				12F9DF9F18E2A1E700A63E1C /* 1_startScreen */,
+				12F9DFA018E2A20C00A63E1C /* 2_soldierScreen */,
+				12F9DFA118E2A23000A63E1C /* 3_backpackScreen */,
+				12F9DFA218E2A25100A63E1C /* 4_mapScreen */,
 			);
 			path = "MAIV-IFF";
 			sourceTree = "<group>";
@@ -162,6 +179,52 @@
 				12B2E94318E0B49D00E5EB29 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		12F9DF9F18E2A1E700A63E1C /* 1_startScreen */ = {
+			isa = PBXGroup;
+			children = (
+				12F9DF9518E29BEA00A63E1C /* StartViewController.h */,
+				12F9DF9618E29BEA00A63E1C /* StartViewController.m */,
+				12F9DF9218E29A3200A63E1C /* StartView.h */,
+				12F9DF9318E29A3200A63E1C /* StartView.m */,
+			);
+			name = 1_startScreen;
+			sourceTree = "<group>";
+		};
+		12F9DFA018E2A20C00A63E1C /* 2_soldierScreen */ = {
+			isa = PBXGroup;
+			children = (
+				12F9DF9818E2A04D00A63E1C /* SoldierViewController.h */,
+				12F9DF9918E2A04D00A63E1C /* SoldierViewController.m */,
+				12F9DF9B18E2A06200A63E1C /* SoldierView.h */,
+				12F9DF9C18E2A06200A63E1C /* SoldierView.m */,
+			);
+			name = 2_soldierScreen;
+			sourceTree = "<group>";
+		};
+		12F9DFA118E2A23000A63E1C /* 3_backpackScreen */ = {
+			isa = PBXGroup;
+			children = (
+				12F9DFA618E2A31B00A63E1C /* BackpackViewController.h */,
+				12F9DFA718E2A31B00A63E1C /* BackpackViewController.m */,
+				12F9DFA318E2A30400A63E1C /* BackpackView.h */,
+				12F9DFA418E2A30400A63E1C /* BackpackView.m */,
+			);
+			name = 3_backpackScreen;
+			sourceTree = "<group>";
+		};
+		12F9DFA218E2A25100A63E1C /* 4_mapScreen */ = {
+			isa = PBXGroup;
+			children = (
+				12F9DFA918E2A42000A63E1C /* MapViewController.h */,
+				12F9DFAA18E2A42000A63E1C /* MapViewController.m */,
+				12F9DFAC18E2A43A00A63E1C /* MapView.h */,
+				12F9DFAD18E2A43A00A63E1C /* MapView.m */,
+				12FA694718E0D9140049DA58 /* MapBoxView.h */,
+				12FA694818E0D9140049DA58 /* MapBoxView.m */,
+			);
+			name = 4_mapScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,10 +357,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12FA694618E0D8DC0049DA58 /* MapBoxViewController.m in Sources */,
+				12F9DFA518E2A30400A63E1C /* BackpackView.m in Sources */,
+				12F9DFAE18E2A43A00A63E1C /* MapView.m in Sources */,
+				12F9DFA818E2A31B00A63E1C /* BackpackViewController.m in Sources */,
 				12FA694918E0D9140049DA58 /* MapBoxView.m in Sources */,
 				12B2E93218E0B49D00E5EB29 /* AppDelegate.m in Sources */,
+				12F9DF9718E29BEA00A63E1C /* StartViewController.m in Sources */,
 				12B2E92E18E0B49D00E5EB29 /* main.m in Sources */,
+				12F9DF9D18E2A06200A63E1C /* SoldierView.m in Sources */,
+				12F9DF9A18E2A04D00A63E1C /* SoldierViewController.m in Sources */,
+				12F9DF9418E29A3200A63E1C /* StartView.m in Sources */,
+				12F9DFAB18E2A42000A63E1C /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +489,7 @@
 				GCC_PREFIX_HEADER = "MAIV-IFF/MAIV-IFF-Prefix.pch";
 				INFOPLIST_FILE = "MAIV-IFF/MAIV-IFF-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -433,6 +504,7 @@
 				GCC_PREFIX_HEADER = "MAIV-IFF/MAIV-IFF-Prefix.pch";
 				INFOPLIST_FILE = "MAIV-IFF/MAIV-IFF-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
