@@ -10,4 +10,11 @@
 
 @interface SoldierView : UIView
 
+@property(strong, nonatomic)UIImageView *photoView;
+@property(strong, nonatomic)UIButton *btnCamera;
+@property(strong, nonatomic)UIButton *btnNext;
+@property(strong, nonatomic)UILabel *lblCaptain;
+
+-(void)showNext;
+
 @end

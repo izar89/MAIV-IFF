@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-#import "MapView.h"
 #import "MapBoxView.h"
 
 @interface MapViewController : UIViewController
 
-@property(strong, nonatomic)MapView *view;
-@property(strong, nonatomic)MapBoxView *mapBoxView;
+@property(strong, nonatomic)MapBoxView *view;
 
 @end

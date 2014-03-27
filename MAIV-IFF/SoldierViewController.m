@@ -42,11 +42,17 @@
 }
 
 -(void)initCameraView{
-    // CameraView
-    self.cameraView = [[CameraView alloc] initWithFrame:self.view.frame];
-    self.cameraView.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2);
-    [self.view addSubview:self.cameraView];
-    [self.cameraView.btnCamera addTarget:self action:@selector(btnCameraTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view.btnCamera addTarget:self action:@selector(btnCameraTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view.btnNext addTarget:self action:@selector(btnNextTapped:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)btnCameraTapped:(id)sender{
+    [self takeSimulatorSafePhoto];
+}
+
+-(void)btnNextTapped:(id)sender{
+    BackpackViewController *backpackVC = [[BackpackViewController alloc] init];
+    [self.navigationController pushViewController:backpackVC animated:YES];
 }
 
 -(void)takeSimulatorSafePhoto{
@@ -69,15 +75,13 @@
     }
 }
 
--(void)btnCameraTapped:(id)sender{
-    [self takeSimulatorSafePhoto];
-}
-
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     [picker dismissViewControllerAnimated:YES completion:nil];
     UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
     [self detectFacesInUIImage:image];
+    
+    [self.view showNext];
 }
 
 -(void)detectFacesInUIImage:(UIImage *)facePicture
@@ -85,7 +89,8 @@
     CIImage* image = [CIImage imageWithCGImage:facePicture.CGImage];
     
     CIDetector* detector = [CIDetector detectorOfType:CIDetectorTypeFace
-                                              context:nil options:[NSDictionary dictionaryWithObject:CIDetectorAccuracyLow forKey:CIDetectorAccuracy]];
+                                              context:nil
+                                              options:[NSDictionary dictionaryWithObject:CIDetectorAccuracyLow forKey:CIDetectorAccuracy]];
     
     NSArray* features = [detector featuresInImage:image];
     
@@ -95,7 +100,7 @@
         modifiedFaceBounds.origin.y = facePicture.size.height-faceObject.bounds.size.height-faceObject.bounds.origin.y;
         CGImageRef imageRef = CGImageCreateWithImageInRect([facePicture CGImage], modifiedFaceBounds);
         UIImage *faceImage = [UIImage imageWithCGImage:imageRef];
-        self.cameraView.photoView.image = faceImage;
+        self.view.photoView.image = faceImage;
     }
 }
 

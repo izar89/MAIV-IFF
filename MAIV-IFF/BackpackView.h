@@ -10,4 +10,6 @@
 
 @interface BackpackView : UIView
 
+@property(strong, nonatomic)UIButton *btnNext;
+
 @end

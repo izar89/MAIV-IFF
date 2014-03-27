@@ -15,6 +15,18 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"backpack.png"]];
+        
+        UIImage *headerImage = [UIImage imageNamed:@"header"];
+        UIImageView *headerImageView = [[UIImageView alloc] initWithImage:headerImage];
+        [self addSubview:headerImageView];
+        
+        UIImage *btnNextImage = [UIImage imageNamed:@"btnNext2"];
+        self.btnNext = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self.btnNext setBackgroundImage:btnNextImage forState:UIControlStateNormal];
+        self.btnNext.frame = CGRectMake(0, 0, btnNextImage.size.width, btnNextImage.size.height);
+        self.btnNext.center = CGPointMake((self.frame.size.width / 2), 950);
+        [self addSubview:self.btnNext];
     }
     return self;
 }

@@ -27,8 +27,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.mapBoxView = [[MapBoxView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:self.mapBoxView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,27 +37,7 @@
 
 -(void)loadView{
     CGRect bounds = [[UIScreen mainScreen] bounds];
-    self.view = [[MapView alloc] initWithFrame:bounds];
+    self.view = [[MapBoxView alloc] initWithFrame:bounds];
 }
-
-//-(void)getRoute{
-//    NSString *path = @"http://localhost/RMDII/MAIV-IFF-API/api/routecoords";
-//    NSURL *url = [NSURL URLWithString:path];
-//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-//    operation.responseSerializer = [AFJSONResponseSerializer serializer];
-//    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSLog(@"Loaded data: %@", responseObject);
-//        [self saveJsonWithData:responseObject];
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"Error loading data");
-//    }];
-//    [operation start];
-//}
-//
-//-(void)saveJsonWithData:(NSData *)data{
-//    NSString *jsonPath=[[NSSearchPathForDirectoriesInDomains(NSUserDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingFormat:@"/data.json"];
-//    [data writeToFile:jsonPath atomically:YES];
-//}
 
 @end

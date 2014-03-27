@@ -19,6 +19,15 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
+        // Check CUstom Fonts (CalcitePro-Regular)
+//        NSArray *fontFamilies = [UIFont familyNames];
+//        for (int i = 0; i < [fontFamilies count]; i++)
+//        {
+//            NSString *fontFamily = [fontFamilies objectAtIndex:i];
+//            NSArray *fontNames = [UIFont fontNamesForFamilyName:[fontFamilies objectAtIndex:i]];
+//            NSLog (@"%@: %@", fontFamily, fontNames);
+//        }
     }
     return self;
 }
@@ -38,13 +47,41 @@
 -(void)loadView{
     CGRect bounds = [[UIScreen mainScreen] bounds];
     self.view = [[StartView alloc] initWithFrame:bounds];
+    [self.view.btnStart setEnabled:NO];
     [self.view.btnStart addTarget:self action:@selector(btnStartTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self saveRoutecoordsData];
 }
 
 -(void)btnStartTapped:(id)sender{
     SoldierViewController *soldierVC = [[SoldierViewController alloc] init];
     [self.navigationController pushViewController:soldierVC animated:YES];
 }
+
+-(void)saveRoutecoordsData{
+    NSURL *url = [NSURL URLWithString:@"http://localhost/RMDII/MAIV-IFF-API/api/routecoords"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"Loaded data: %@", responseObject);
+        
+        //Save to documentDirectory
+        NSString *documentsDirectory = nil;
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        documentsDirectory = [paths objectAtIndex:0];
+        NSString *pathString = [NSString stringWithFormat:@"%@/%@",documentsDirectory, @"routecoords"];
+        [responseObject writeToFile:pathString atomically:YES];
+        
+        //Enable startBtn
+        [self.view.btnStart setEnabled:YES];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error loading data");
+        
+    }];
+    [operation start];
+}
+
 
 /*
 #pragma mark - Navigation

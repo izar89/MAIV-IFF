@@ -26,8 +26,7 @@
 		12F9DFA518E2A30400A63E1C /* BackpackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFA418E2A30400A63E1C /* BackpackView.m */; };
 		12F9DFA818E2A31B00A63E1C /* BackpackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFA718E2A31B00A63E1C /* BackpackViewController.m */; };
 		12F9DFAB18E2A42000A63E1C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFAA18E2A42000A63E1C /* MapViewController.m */; };
-		12F9DFAE18E2A43A00A63E1C /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFAD18E2A43A00A63E1C /* MapView.m */; };
-		12F9DFB718E2BE8C00A63E1C /* CameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFB618E2BE8C00A63E1C /* CameraView.m */; };
+		12F9DFBF18E3F9D500A63E1C /* CalcitePro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12F9DFBE18E3F93100A63E1C /* CalcitePro-Regular.otf */; };
 		12FA694918E0D9140049DA58 /* MapBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FA694818E0D9140049DA58 /* MapBoxView.m */; };
 		BCE60ECA424844318066FB4E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A99E17856944428C5571D6 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -73,10 +72,7 @@
 		12F9DFA718E2A31B00A63E1C /* BackpackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackpackViewController.m; sourceTree = "<group>"; };
 		12F9DFA918E2A42000A63E1C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		12F9DFAA18E2A42000A63E1C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		12F9DFAC18E2A43A00A63E1C /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
-		12F9DFAD18E2A43A00A63E1C /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
-		12F9DFB518E2BE8C00A63E1C /* CameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraView.h; sourceTree = "<group>"; };
-		12F9DFB618E2BE8C00A63E1C /* CameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraView.m; sourceTree = "<group>"; };
+		12F9DFBE18E3F93100A63E1C /* CalcitePro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CalcitePro-Regular.otf"; sourceTree = "<group>"; };
 		12FA694718E0D9140049DA58 /* MapBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapBoxView.h; sourceTree = "<group>"; };
 		12FA694818E0D9140049DA58 /* MapBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapBoxView.m; sourceTree = "<group>"; };
 		41A99E17856944428C5571D6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +154,7 @@
 		12B2E92818E0B49D00E5EB29 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				12F9DFBE18E3F93100A63E1C /* CalcitePro-Regular.otf */,
 				12B2E92918E0B49D00E5EB29 /* MAIV-IFF-Info.plist */,
 				12B2E92A18E0B49D00E5EB29 /* InfoPlist.strings */,
 				12B2E92D18E0B49D00E5EB29 /* main.m */,
@@ -202,8 +199,6 @@
 				12F9DF9918E2A04D00A63E1C /* SoldierViewController.m */,
 				12F9DF9B18E2A06200A63E1C /* SoldierView.h */,
 				12F9DF9C18E2A06200A63E1C /* SoldierView.m */,
-				12F9DFB518E2BE8C00A63E1C /* CameraView.h */,
-				12F9DFB618E2BE8C00A63E1C /* CameraView.m */,
 			);
 			name = 2_soldierScreen;
 			sourceTree = "<group>";
@@ -224,8 +219,6 @@
 			children = (
 				12F9DFA918E2A42000A63E1C /* MapViewController.h */,
 				12F9DFAA18E2A42000A63E1C /* MapViewController.m */,
-				12F9DFAC18E2A43A00A63E1C /* MapView.h */,
-				12F9DFAD18E2A43A00A63E1C /* MapView.m */,
 				12FA694718E0D9140049DA58 /* MapBoxView.h */,
 				12FA694818E0D9140049DA58 /* MapBoxView.m */,
 			);
@@ -309,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12F9DFBF18E3F9D500A63E1C /* CalcitePro-Regular.otf in Resources */,
 				12B2E92C18E0B49D00E5EB29 /* InfoPlist.strings in Resources */,
 				12B2E93418E0B49D00E5EB29 /* Images.xcassets in Resources */,
 			);
@@ -363,7 +357,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				12F9DFA518E2A30400A63E1C /* BackpackView.m in Sources */,
-				12F9DFAE18E2A43A00A63E1C /* MapView.m in Sources */,
 				12F9DFA818E2A31B00A63E1C /* BackpackViewController.m in Sources */,
 				12FA694918E0D9140049DA58 /* MapBoxView.m in Sources */,
 				12B2E93218E0B49D00E5EB29 /* AppDelegate.m in Sources */,
@@ -373,7 +366,6 @@
 				12F9DF9A18E2A04D00A63E1C /* SoldierViewController.m in Sources */,
 				12F9DF9418E29A3200A63E1C /* StartView.m in Sources */,
 				12F9DFAB18E2A42000A63E1C /* MapViewController.m in Sources */,
-				12F9DFB718E2BE8C00A63E1C /* CameraView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BackpackView.h"
+#import "MapViewController.h"
 
 @interface BackpackViewController : UIViewController
 

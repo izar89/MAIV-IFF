@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.view.btnNext addTarget:self action:@selector(btnNextTapped:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,6 +39,11 @@
 -(void)loadView{
     CGRect bounds = [[UIScreen mainScreen] bounds];
     self.view = [[BackpackView alloc] initWithFrame:bounds];
+}
+
+-(void)btnNextTapped:(id)sender{
+    MapViewController *mapVC = [[MapViewController alloc] init];
+    [self.navigationController pushViewController:mapVC animated:YES];
 }
 
 /*
