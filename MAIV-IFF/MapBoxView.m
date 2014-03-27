@@ -17,12 +17,10 @@
         // Initialization code
         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
         
-        //Map
-        RMMapboxSource *source = [[RMMapboxSource alloc] initWithMapID:@"stijnheylen.hk12j1bl"];
-        self.mapView = [[RMMapView alloc] initWithFrame:frame andTilesource:source centerCoordinate:CLLocationCoordinate2DMake(50.8798, 2.9003) zoomLevel:15 maxZoomLevel:20 minZoomLevel:8 backgroundImage:nil];
+        //UI
+        self.mapView = [[RMMapView alloc] initWithFrame:self.frame];
         [self addSubview:self.mapView];
         
-        //UI
         UIImage *headerImage = [UIImage imageNamed:@"header"];
         UIImageView *headerImageView = [[UIImageView alloc] initWithImage:headerImage];
         [self addSubview:headerImageView];
@@ -32,13 +30,17 @@
         footerImageView.center = CGPointMake((self.frame.size.width / 2), self.frame.size.height - footerImage.size.height / 2);
         [self addSubview:footerImageView];
         
+        UIImage *compasImage = [UIImage imageNamed:@"map_kompas"];
+        UIImageView *compasImageView = [[UIImageView alloc] initWithImage:compasImage];
+        compasImageView.center = CGPointMake((self.frame.size.width - compasImage.size.width / 2), self.frame.size.height - compasImage.size.height / 2);
+        [self addSubview:compasImageView];
     }
     return self;
 }
 
--(void)updateWithRoutecoords:(NSArray *)routecoords{
-    [self.mapView addAnnotations:routecoords];
-}
+//-(void)updateWithRoutecoords:(NSArray *)routecoords{
+//    [self.mapView addAnnotations:routecoords];
+//}
 
 
 /*

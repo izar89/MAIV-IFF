@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "RMMapView.h"
 #import "RMMapBoxSource.h"
+#import "RMTileCache.h"
 
 @interface MapBoxView : UIView
 
-@property(nonatomic, strong)RMMapView *mapView;
-
+@property(strong, nonatomic)RMMapView *mapView;
 
 @end

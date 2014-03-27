@@ -12,7 +12,7 @@
 #import "StartView.h"
 #import "SoldierViewController.h"
 
-@interface StartViewController : UIViewController
+@interface StartViewController : UIViewController<RMTileCacheBackgroundDelegate>
 
 @property(strong, nonatomic)StartView *view;
 

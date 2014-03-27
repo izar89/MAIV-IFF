@@ -11,5 +11,7 @@
 @interface StartView : UIView
 
 @property(strong, nonatomic)UIButton *btnStart;
+@property(strong, nonatomic)UIProgressView *mapCachingProgressView;
+//@property(strong, nonatomic)UIProgressView *jsonsProgressView;
 
 @end

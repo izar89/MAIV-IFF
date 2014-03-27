@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>http://student.howest.be/stijn.heylen/20132014/MAIV/api/routecoords</string>
+	<string>http://student.howest.be/stijn.heylen/20132014/MAIV/api/markers</string>
+	<string>http://student.howest.be/stijn.heylen/20132014/MAIV/api/backpackitems</string>
+	<string>http://student.howest.be/stijn.heylen/20132014/MAIV/api/quests</string>
+</array>
+</plist>
