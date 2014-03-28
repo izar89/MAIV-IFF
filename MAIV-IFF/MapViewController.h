@@ -9,9 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "MapBoxView.h"
 #import "QuestViewController.h"
+#import "CoreLocation/CoreLocation.h"
 
-@interface MapViewController : UIViewController
+@interface MapViewController : UIViewController <CLLocationManagerDelegate>
 
 @property(strong, nonatomic)MapBoxView *view;
+@property (retain) CLLocationManager* locationManager;
+@property (retain) MapViewController* MapViewController;
+@property (retain) MapBoxView* MapView;
 
 @end

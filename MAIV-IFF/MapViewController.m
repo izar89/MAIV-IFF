@@ -8,11 +8,13 @@
 
 #import "MapViewController.h"
 
+
 @interface MapViewController ()
 
 @end
 
 @implementation MapViewController
+@synthesize view, locationManager;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +30,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    //Init GPS
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    
+    
+    //Turn on the GPS
+    [self.locationManager startUpdatingLocation];
+    //[self initializeGPS];
+    
+    
     //TODO: DELETE!
     UIImage *btnNextImage = [UIImage imageNamed:@"btnNext"];
     UIButton *btnNext = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -36,6 +48,22 @@
     btnNext.center = CGPointMake((self.view.frame.size.width / 2), 950);
     [btnNext addTarget:self action:@selector(btnNextTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btnNext];
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"Location: %@", [newLocation description]);
+    
+    MapBoxView *mapBoxView;
+    mapBoxView.mapView.centerCoordinate = newLocation.coordinate; //Werkt nog niet//
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error
+{
+    NSLog(@"Error: %@", [error description]);
 }
 
 -(void)btnNextTapped:(id)sender{

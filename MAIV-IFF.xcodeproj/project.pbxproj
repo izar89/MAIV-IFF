@@ -27,7 +27,6 @@
 		12F9DFA818E2A31B00A63E1C /* BackpackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFA718E2A31B00A63E1C /* BackpackViewController.m */; };
 		12F9DFAB18E2A42000A63E1C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFAA18E2A42000A63E1C /* MapViewController.m */; };
 		12F9DFBF18E3F9D500A63E1C /* CalcitePro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12F9DFBE18E3F93100A63E1C /* CalcitePro-Regular.otf */; };
-		12F9DFC818E4C29000A63E1C /* jsons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12F9DFC718E4C29000A63E1C /* jsons.plist */; };
 		12F9DFCB18E53E5600A63E1C /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFCA18E53E5600A63E1C /* FileManager.m */; };
 		12F9DFD118E555D600A63E1C /* EgyptienneFLTStd-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12F9DFD018E555A800A63E1C /* EgyptienneFLTStd-Roman.otf */; };
 		12F9DFD418E5607500A63E1C /* BackpackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFD318E5607500A63E1C /* BackpackItem.m */; };
@@ -36,6 +35,8 @@
 		12F9DFDD18E5823100A63E1C /* QuestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFDC18E5823100A63E1C /* QuestViewController.m */; };
 		12FA694918E0D9140049DA58 /* MapBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FA694818E0D9140049DA58 /* MapBoxView.m */; };
 		BCE60ECA424844318066FB4E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A99E17856944428C5571D6 /* libPods.a */; };
+		BFF42CA818E5AB270040F223 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF42CA718E5AB270040F223 /* CoreLocation.framework */; };
+		BFF42CAA18E5AB2F0040F223 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF42CA918E5AB2F0040F223 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		12FA694718E0D9140049DA58 /* MapBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapBoxView.h; sourceTree = "<group>"; };
 		12FA694818E0D9140049DA58 /* MapBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapBoxView.m; sourceTree = "<group>"; };
 		41A99E17856944428C5571D6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFF42CA718E5AB270040F223 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BFF42CA918E5AB2F0040F223 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C7CC2C40325E4365A4005D0E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF42CAA18E5AB2F0040F223 /* MapKit.framework in Frameworks */,
+				BFF42CA818E5AB270040F223 /* CoreLocation.framework in Frameworks */,
 				12B2E92418E0B49D00E5EB29 /* CoreGraphics.framework in Frameworks */,
 				12B2E92618E0B49D00E5EB29 /* UIKit.framework in Frameworks */,
 				12B2E92218E0B49D00E5EB29 /* Foundation.framework in Frameworks */,
@@ -145,6 +150,8 @@
 		12B2E92018E0B49D00E5EB29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BFF42CA918E5AB2F0040F223 /* MapKit.framework */,
+				BFF42CA718E5AB270040F223 /* CoreLocation.framework */,
 				12B2E92118E0B49D00E5EB29 /* Foundation.framework */,
 				12B2E92318E0B49D00E5EB29 /* CoreGraphics.framework */,
 				12B2E92518E0B49D00E5EB29 /* UIKit.framework */,
