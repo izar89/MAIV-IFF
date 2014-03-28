@@ -53,7 +53,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.photoView.image = [FileManager getImageFromDDWithName:@"photo.png"];
-    self.view.txtCaptain.text = [FileManager getStringFromPlistWithName:@"generalText" AndKey:@"backpack_default"];
+    self.view.txtGeneral.text = [FileManager getStringFromPlistWithName:@"generalText" AndKey:@"backpack_default"];
     [self.view.btnDeselect addTarget:self action:@selector(btnDeselectTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view.btnNext addTarget:self action:@selector(btnNextTapped:) forControlEvents:UIControlEventTouchUpInside];
 }
@@ -76,28 +76,17 @@
 
     int index =  [self.btnBackpackItems indexOfObject:sender];
     BackpackItem *selectedBackpackItem = [self.backpackItems objectAtIndex:index];
-    self.view.txtCaptain.text = selectedBackpackItem.text;
+    self.view.txtGeneral.text = selectedBackpackItem.text;
 }
 
 -(void)btnDeselectTapped:(id)sender{
     self.selectedBtnBackpackItem.selected = NO;
-    self.view.txtCaptain.text = [FileManager getStringFromPlistWithName:@"generalText" AndKey:@"backpack_default"];
+    self.view.txtGeneral.text = [FileManager getStringFromPlistWithName:@"generalText" AndKey:@"backpack_default"];
 }
 
 -(void)btnNextTapped:(id)sender{
     MapViewController *mapVC = [[MapViewController alloc] init];
     [self.navigationController pushViewController:mapVC animated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

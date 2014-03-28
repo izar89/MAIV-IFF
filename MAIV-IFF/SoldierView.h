@@ -13,7 +13,7 @@
 @property(strong, nonatomic)UIImageView *photoView;
 @property(strong, nonatomic)UIButton *btnCamera;
 @property(strong, nonatomic)UIButton *btnNext;
-@property(strong, nonatomic)UITextField *txtCaptain;
+@property(strong, nonatomic)UITextField *txtGeneral;
 
 -(void)showNext;
 

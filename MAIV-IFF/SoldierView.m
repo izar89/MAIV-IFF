@@ -42,12 +42,12 @@
         [self addSubview:self.btnNext];
         
         UIFont *customFont = [UIFont fontWithName:@"CalcitePro-Regular" size:24];
-        self.txtCaptain = [[UITextField alloc] initWithFrame:CGRectMake(200, 818, 360, 50)];
-        self.txtCaptain.textAlignment = NSTextAlignmentCenter;
-        self.txtCaptain.font = customFont;
-        self.txtCaptain.userInteractionEnabled = NO;
-        self.txtCaptain.text = @"Dag soldaat! Hier kan je je foto trekken.";
-        [self addSubview:self.txtCaptain];
+        self.txtGeneral = [[UITextField alloc] initWithFrame:CGRectMake(200, 818, 360, 50)];
+        self.txtGeneral.textAlignment = NSTextAlignmentCenter;
+        self.txtGeneral.font = customFont;
+        self.txtGeneral.userInteractionEnabled = NO;
+        self.txtGeneral.text = @"Dag soldaat! Hier kan je je foto trekken.";
+        [self addSubview:self.txtGeneral];
         
         UIImage *headerImage = [UIImage imageNamed:@"header"];
         UIImageView *headerImageView = [[UIImageView alloc] initWithImage:headerImage];
@@ -59,7 +59,7 @@
 -(void)showNext{
     
     self.btnNext.hidden = NO;
-    self.txtCaptain.text = @"Tevreden? Druk dan op verder gaan.";
+    self.txtGeneral.text = @"Tevreden? Druk dan op verder gaan.";
 }
 
 /*

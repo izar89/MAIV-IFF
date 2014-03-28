@@ -45,7 +45,7 @@
     lblLoading = [ [UILabel alloc ] initWithFrame:CGRectMake((self.view.bounds.size.width / 2) - 75, 390.0, 150.0, 43.0) ];
     lblLoading.textColor = [UIColor blackColor];
     lblLoading.font = [UIFont fontWithName:@"CalcitePro-Regular" size:(20.0)];
-    lblLoading.text = [NSString stringWithFormat: @"Loading..."];
+    lblLoading.text = [NSString stringWithFormat: @"Laden..."];
     lblLoading.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:lblLoading];
     
@@ -156,7 +156,7 @@
 }
 
 -(void)checkIfloadingIsDone{
-    if(self.jsonsLoaded && self.mapCacheLoaded){
+    if(self.jsonsLoaded){ //&& self.mapCacheLoaded
         [self.view.btnStart setEnabled:YES];
         [lblLoading removeFromSuperview];
         NSLog(@"Loading done");

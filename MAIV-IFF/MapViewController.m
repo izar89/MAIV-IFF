@@ -27,6 +27,20 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //TODO: DELETE!
+    UIImage *btnNextImage = [UIImage imageNamed:@"btnNext"];
+    UIButton *btnNext = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btnNext setBackgroundImage:btnNextImage forState:UIControlStateNormal];
+    btnNext.frame = CGRectMake(0, 0, btnNextImage.size.width, btnNextImage.size.height);
+    btnNext.center = CGPointMake((self.view.frame.size.width / 2), 950);
+    [btnNext addTarget:self action:@selector(btnNextTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btnNext];
+}
+
+-(void)btnNextTapped:(id)sender{
+    QuestViewController *questVC = [[QuestViewController alloc] init];
+    [self.navigationController pushViewController:questVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

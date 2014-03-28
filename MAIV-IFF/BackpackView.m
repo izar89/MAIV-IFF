@@ -30,13 +30,12 @@
         [self addSubview:headerImageView];
         
         UIFont *customFont = [UIFont fontWithName:@"EgyptienneFLTStd-Roman" size:22];
-        self.txtCaptain = [[UITextView alloc] initWithFrame:CGRectMake(290, 180, 415, 125)];
-        self.txtCaptain.textColor = [UIColor colorWithRed:99/255.0f green:91/255.0f blue:80/255.0f alpha:1];
-        self.txtCaptain.font = customFont;
-        self.txtCaptain.userInteractionEnabled = NO;
-        self.txtCaptain.backgroundColor = [UIColor clearColor];
-        self.txtCaptain.text = @"...";
-        [self addSubview:self.txtCaptain];
+        self.txtGeneral = [[UITextView alloc] initWithFrame:CGRectMake(290, 180, 415, 125)];
+        self.txtGeneral.textColor = [UIColor colorWithRed:99/255.0f green:91/255.0f blue:80/255.0f alpha:1];
+        self.txtGeneral.font = customFont;
+        self.txtGeneral.userInteractionEnabled = NO;
+        self.txtGeneral.backgroundColor = [UIColor clearColor];
+        [self addSubview:self.txtGeneral];
         
         self.btnDeselect = [UIButton buttonWithType:UIButtonTypeCustom];
         self.btnDeselect.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);

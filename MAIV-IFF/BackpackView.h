@@ -13,6 +13,6 @@
 @property(strong, nonatomic)UIImageView *photoView;
 @property(strong, nonatomic)UIButton *btnDeselect;
 @property(strong, nonatomic)UIButton *btnNext;
-@property(strong, nonatomic)UITextView *txtCaptain;
+@property(strong, nonatomic)UITextView *txtGeneral;
 
 @end
