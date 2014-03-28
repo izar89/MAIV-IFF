@@ -84,6 +84,7 @@
             //imgView.center = [touch locationInView:self.view];
             self.selectedBackpackItemImageViewIndex = [NSNumber numberWithInt: [self.backpackItemImageViews indexOfObject:backpackItemImageView]];
             self.originalPosition = backpackItemImageView.center;
+            [self.view bringSubviewToFront:backpackItemImageView];
         }
     }
 }
@@ -105,33 +106,36 @@
 
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    UITouch *touch = [touches anyObject];
+    if(self.selectedBackpackItemImageViewIndex){
+        
+        UITouch *touch = [touches anyObject];
     
-    CGPoint positionInView = [touch locationInView:self.view];
-    CGPoint newPosition;
-    if (CGRectContainsPoint(CGRectMake(500, 300, 150, 150), positionInView)) {
-        // Position ok!
-        newPosition = positionInView;
-        if(![self checkIfAnswerIsOk]){
-            newPosition = self.originalPosition;
+        CGPoint positionInView = [touch locationInView:self.view];
+        CGPoint newPosition;
+        if (CGRectContainsPoint(CGRectMake(500, 300, 150, 150), positionInView)) {
+            // Position ok!
+            newPosition = positionInView;
+            if(![self checkIfAnswerIsOk]){
+                newPosition = self.originalPosition;
+            } else {
+                self.view.userInteractionEnabled = NO;
+                self.view.txtGeneral.text = self.quest.response;
+            }
         } else {
-            self.view.userInteractionEnabled = NO;
-            self.view.txtGeneral.text = self.quest.response;
+            // Wrong position
+            newPosition = self.originalPosition;
         }
-    } else {
-        // Wrong position
-        newPosition = self.originalPosition;
-    }
     
-    [UIView animateWithDuration:0.4
-                          delay:0.0
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^ {
-                         UIImageView *backpackItemImageView = [self.backpackItemImageViews objectAtIndex:[self.selectedBackpackItemImageViewIndex intValue]];
-                         backpackItemImageView.center = newPosition;
-                     }
-                     completion:^(BOOL finished) {}];
-    self.selectedBackpackItemImageViewIndex = nil;
+        [UIView animateWithDuration:0.4
+                            delay:0.0
+                            options:UIViewAnimationOptionCurveEaseInOut
+                        animations:^ {
+                            UIImageView *backpackItemImageView = [self.backpackItemImageViews objectAtIndex:[self.selectedBackpackItemImageViewIndex intValue]];
+                            backpackItemImageView.center = newPosition;
+                        }
+                        completion:^(BOOL finished) {}];
+        self.selectedBackpackItemImageViewIndex = nil;
+    }
 }
 
 -(BOOL)checkIfAnswerIsOk{
