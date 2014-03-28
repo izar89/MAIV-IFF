@@ -40,7 +40,7 @@
         
         UIImage *compasImage = [UIImage imageNamed:@"map_kompas"];
         UIImageView *compasImageView = [[UIImageView alloc] initWithImage:compasImage];
-        compasImageView.center = CGPointMake((self.frame.size.width - compasImage.size.width / 2), self.frame.size.height - compasImage.size.height / 2);
+        compasImageView.center = CGPointMake((self.frame.size.width / 2), self.frame.size.height - compasImage.size.height / 2);
         [self addSubview:compasImageView];
     }
     return self;

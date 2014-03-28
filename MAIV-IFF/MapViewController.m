@@ -46,7 +46,7 @@
     UIButton *btnNext = [UIButton buttonWithType:UIButtonTypeCustom];
     [btnNext setBackgroundImage:btnNextImage forState:UIControlStateNormal];
     btnNext.frame = CGRectMake(0, 0, btnNextImage.size.width, btnNextImage.size.height);
-    btnNext.center = CGPointMake((self.view.frame.size.width / 2), 950);
+    btnNext.center = CGPointMake((self.view.frame.size.width - btnNext.frame.size.width /2 -20), 980);
     [btnNext addTarget:self action:@selector(btnNextTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btnNext];
     
