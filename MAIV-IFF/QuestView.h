@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Quest.h"
+#import "FileManager.h"
 
 @interface QuestView : UIView
 
 @property(strong, nonatomic)UIImageView *photoView;
 @property(strong, nonatomic)UITextView *txtGeneral;
+@property(strong, nonatomic)UITextView *txtBackpackInfo;
 
 @end

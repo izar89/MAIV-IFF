@@ -36,7 +36,14 @@
         self.txtGeneral.userInteractionEnabled = NO;
         self.txtGeneral.backgroundColor = [UIColor clearColor];
         [self addSubview:self.txtGeneral];
-
+        
+        UIFont *customFont2 = [UIFont fontWithName:@"CalcitePro-Regular" size:31];
+        self.txtBackpackInfo = [[UITextView alloc] initWithFrame:CGRectMake(60, 410, 350, 80)];
+        self.txtBackpackInfo.textColor = [UIColor colorWithRed:243/255.0f green:239/255.0f blue:234/255.0f alpha:1];
+        self.txtBackpackInfo.font = customFont2;
+        self.txtBackpackInfo.userInteractionEnabled = NO;
+        self.txtBackpackInfo.backgroundColor = [UIColor clearColor];
+        [self addSubview:self.txtBackpackInfo];
     }
     return self;
 }

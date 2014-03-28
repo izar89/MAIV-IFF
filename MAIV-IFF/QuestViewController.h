@@ -10,9 +10,12 @@
 #import "QuestView.h"
 #import "FileManager.h"
 #import "BackpackItem.h"
+#import "Quest.h"
 
 @interface QuestViewController : UIViewController
 
 @property(strong, nonatomic)QuestView *view;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andQuest:(Quest *)quest;
 
 @end

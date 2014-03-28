@@ -2,9 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>map_default</key>
+	<key>quest_backpack_info</key>
+	<string>Sleep het gewenste voorwerp in je hand om het te gebruiken.</string>
+	<key>map_general_default</key>
 	<string>Dit is je kaart. Kijk op het kompas en volg de rode pijl om naar je volgende bestemming te gaan.</string>
-	<key>backpack_default</key>
+	<key>backpack_general_default</key>
 	<string>Dit is je rugzak met al je oorlogsgereedschap. Je missie is om deze zo goed mogelijk te gerbuiken op je tocht. Succes!</string>
 </dict>
 </plist>

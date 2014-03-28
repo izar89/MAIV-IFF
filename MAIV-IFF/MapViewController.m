@@ -11,6 +11,9 @@
 
 @interface MapViewController ()
 
+@property(strong, nonatomic)NSMutableArray *quests;
+@property(strong, nonatomic)Quest *selectedQuest;
+
 @end
 
 @implementation MapViewController
@@ -48,6 +51,18 @@
     btnNext.center = CGPointMake((self.view.frame.size.width / 2), 950);
     [btnNext addTarget:self action:@selector(btnNextTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btnNext];
+    
+    [self loadQuests];
+}
+
+-(void)loadQuests{
+    self.quests = [[NSMutableArray alloc] init];
+    for(NSDictionary *questDict in [FileManager getJsonFromDDWithName:@"quests"]){
+        Quest *quest = [Quest createQuestFromDictionary:questDict];
+        [self.quests addObject:quest];
+    }
+    
+    self.selectedQuest = [self.quests objectAtIndex:0];
 }
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -68,7 +83,7 @@
 }
 
 -(void)btnNextTapped:(id)sender{
-    QuestViewController *questVC = [[QuestViewController alloc] init];
+    QuestViewController *questVC = [[QuestViewController alloc] initWithNibName:nil bundle:nil andQuest:self.selectedQuest];
     [self.navigationController pushViewController:questVC animated:YES];
 }
 
