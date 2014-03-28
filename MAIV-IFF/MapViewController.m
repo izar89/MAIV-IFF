@@ -40,8 +40,6 @@
     
     //Turn on the GPS
     [self.locationManager startUpdatingLocation];
-    //[self initializeGPS];
-    
     
     //TODO: DELETE!
     UIImage *btnNextImage = [UIImage imageNamed:@"btnNext"];

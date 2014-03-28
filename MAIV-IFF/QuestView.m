@@ -44,6 +44,12 @@
         self.txtBackpackInfo.userInteractionEnabled = NO;
         self.txtBackpackInfo.backgroundColor = [UIColor clearColor];
         [self addSubview:self.txtBackpackInfo];
+        
+        UIImage *btnBackImage = [UIImage imageNamed:@"btnBack"];
+        self.btnBack = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self.btnBack setBackgroundImage:btnBackImage forState:UIControlStateNormal];
+        self.btnBack.frame = CGRectMake(0, 0, btnBackImage.size.width, btnBackImage.size.height);
+        self.btnBack.center = CGPointMake((self.frame.size.width / 2), 300);
     }
     return self;
 }

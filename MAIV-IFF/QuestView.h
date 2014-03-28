@@ -15,5 +15,6 @@
 @property(strong, nonatomic)UIImageView *photoView;
 @property(strong, nonatomic)UITextView *txtGeneral;
 @property(strong, nonatomic)UITextView *txtBackpackInfo;
+@property(strong, nonatomic)UIButton *btnBack;
 
 @end

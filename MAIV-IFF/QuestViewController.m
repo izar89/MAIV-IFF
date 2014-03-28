@@ -62,6 +62,9 @@
     self.view.photoView.image = [FileManager getImageFromDDWithName:@"photo.png"];
     self.view.txtBackpackInfo.text = [FileManager getStringFromPlistWithName:@"text" AndKey:@"quest_backpack_info"];
     self.view.txtGeneral.text = self.quest.question;
+    
+    //BTN BACK
+    [self.view.btnBack addTarget:self action:@selector(btnBackTapped:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning
@@ -115,8 +118,8 @@
         if(![self checkIfAnswerIsOk]){
             newPosition = self.originalPosition;
         } else {
-            self.view.userInteractionEnabled = NO;
             self.view.txtGeneral.text = self.quest.response;
+            [self.view addSubview:self.view.btnBack];
         }
     } else {
         // Wrong position
@@ -132,6 +135,10 @@
                      }
                      completion:^(BOOL finished) {}];
     self.selectedBackpackItemImageViewIndex = nil;
+}
+
+-(void)btnBackTapped:(id)sender{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(BOOL)checkIfAnswerIsOk{
