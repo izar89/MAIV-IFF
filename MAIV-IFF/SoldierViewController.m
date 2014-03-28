@@ -101,7 +101,31 @@
         CGImageRef imageRef = CGImageCreateWithImageInRect([facePicture CGImage], modifiedFaceBounds);
         UIImage *faceImage = [UIImage imageWithCGImage:imageRef];
         self.view.photoView.image = faceImage;
+        [self mergePhoto:faceImage];
     }
+}
+
+-(void)mergePhoto:(UIImage *)bottomImage{
+    UIImage *topImage = [UIImage imageNamed:@"soldierPhotoFront"];
+    
+    CGSize newSize = CGSizeMake(topImage.size.width, topImage.size.height);
+    UIGraphicsBeginImageContext(newSize);
+    UIGraphicsBeginImageContext( newSize );
+    NSLog(@"%f", newSize.width);
+    [bottomImage drawInRect:CGRectMake(newSize.width / 2 - 130, newSize.height / 2 - 100 ,250,250)];
+    [topImage drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    [self saveImage:newImage];
+}
+
+- (void)saveImage:(UIImage *)image {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *savedImagePath = [documentsDirectory stringByAppendingPathComponent:@"photo.png"];
+    NSData *imageData = UIImagePNGRepresentation(image);
+    [imageData writeToFile:savedImagePath atomically:NO];
 }
 
 @end
