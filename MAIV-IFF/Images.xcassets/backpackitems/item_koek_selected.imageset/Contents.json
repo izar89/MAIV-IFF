@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "btnNext2.png"
+      "filename" : "item_koek_selected.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "btnNext2@2x.png"
+      "filename" : "item_koek_selected@2x.png"
     }
   ],
   "info" : {

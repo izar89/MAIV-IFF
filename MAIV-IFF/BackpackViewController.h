@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "BackpackView.h"
 #import "MapViewController.h"
+#import "FileManager.h"
+#import "BackpackItem.h"
 
 @interface BackpackViewController : UIViewController
 
 @property(strong, nonatomic)BackpackView *view;
+
 
 @end

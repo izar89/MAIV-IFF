@@ -19,16 +19,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        
-        //Map
-        RMMapboxSource *source = [[RMMapboxSource alloc] initWithMapID:@"stijnheylen.hkkg4ihk"];
-        source.retryCount = 0;
-        self.view.mapView.tileSource = source;
-        //mapView = [[RMMapView alloc] initWithFrame:self.view.frame andTilesource:source centerCoordinate:CLLocationCoordinate2DMake(50.8898, 2.8772) zoomLevel:16 maxZoomLevel:16 minZoomLevel:16 backgroundImage:nil];
-        self.view.mapView = [[RMMapView alloc] initWithFrame:self.view.frame andTilesource:source];
-        self.view.mapView.draggingEnabled = NO;
-        self.view.mapView.zoom = 16;
-        self.view.mapView.centerCoordinate = CLLocationCoordinate2DMake(50.8898, 2.8772);
     }
     return self;
 }

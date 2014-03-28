@@ -23,7 +23,7 @@
     if (self) {
         // Custom initialization
         
-        // Check CUstom Fonts (CalcitePro-Regular)
+        // Check CUstom Fonts (CalcitePro-Regular, EgyptienneFLTStd-Roman)
 //        NSArray *fontFamilies = [UIFont familyNames];
 //        for (int i = 0; i < [fontFamilies count]; i++)
 //        {

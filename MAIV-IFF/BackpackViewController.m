@@ -10,6 +10,10 @@
 
 @interface BackpackViewController ()
 
+@property(strong, nonatomic)NSMutableArray *backpackItems;
+@property(strong, nonatomic)NSMutableArray *btnBackpackItems;
+@property(strong, nonatomic)UIButton *selectedBtnBackpackItem;
+
 @end
 
 @implementation BackpackViewController
@@ -19,6 +23,27 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
+        self.backpackItems = [[NSMutableArray alloc] init];
+        self.btnBackpackItems = [[NSMutableArray alloc] init];
+        
+        for(NSDictionary *backpackItemDict in [FileManager getJsonFromDDWithName:@"backpackitems"]){
+            
+            BackpackItem *backpackItem = [BackpackItem createBackpackFromDictionary:backpackItemDict];
+            
+            UIImage *backpackItemImage = [UIImage imageNamed:backpackItem.imageName];
+            UIImage *backpackItemImageSelected = [UIImage imageNamed:backpackItem.imageSelectedName];
+            UIButton *btnBackpackItem = [UIButton buttonWithType:UIButtonTypeCustom];
+            [btnBackpackItem setBackgroundImage:backpackItemImage forState:UIControlStateNormal];
+            [btnBackpackItem setBackgroundImage:backpackItemImageSelected forState:UIControlStateSelected];
+            [btnBackpackItem addTarget:self action:@selector(btnBackpackItemTapped:) forControlEvents:UIControlEventTouchUpInside];
+            btnBackpackItem.frame = CGRectMake(backpackItem.xPos, backpackItem.yPos, backpackItemImage.size.width, backpackItemImage.size.height);
+            
+            [self.backpackItems addObject:backpackItem];
+           
+            [self.btnBackpackItems addObject:btnBackpackItem];
+            [self.view addSubview:btnBackpackItem];
+        }
     }
     return self;
 }
@@ -27,6 +52,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.photoView.image = [FileManager getImageFromDDWithName:@"photo.png"];
+    self.view.txtCaptain.text = [FileManager getStringFromPlistWithName:@"generalText" AndKey:@"backpack_default"];
+    [self.view.btnDeselect addTarget:self action:@selector(btnDeselectTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view.btnNext addTarget:self action:@selector(btnNextTapped:) forControlEvents:UIControlEventTouchUpInside];
 }
 
@@ -39,6 +67,21 @@
 -(void)loadView{
     CGRect bounds = [[UIScreen mainScreen] bounds];
     self.view = [[BackpackView alloc] initWithFrame:bounds];
+}
+
+-(void)btnBackpackItemTapped:(UIButton *)sender{
+    self.selectedBtnBackpackItem.selected = NO;
+    self.selectedBtnBackpackItem = sender;
+    self.selectedBtnBackpackItem.selected = YES;
+
+    int index =  [self.btnBackpackItems indexOfObject:sender];
+    BackpackItem *selectedBackpackItem = [self.backpackItems objectAtIndex:index];
+    self.view.txtCaptain.text = selectedBackpackItem.text;
+}
+
+-(void)btnDeselectTapped:(id)sender{
+    self.selectedBtnBackpackItem.selected = NO;
+    self.view.txtCaptain.text = [FileManager getStringFromPlistWithName:@"generalText" AndKey:@"backpack_default"];
 }
 
 -(void)btnNextTapped:(id)sender{

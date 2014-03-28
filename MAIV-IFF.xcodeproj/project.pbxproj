@@ -30,6 +30,10 @@
 		12F9DFC318E41BB600A63E1C /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFC218E41BB600A63E1C /* QuestionViewController.m */; };
 		12F9DFC618E41BC800A63E1C /* QuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFC518E41BC800A63E1C /* QuestionView.m */; };
 		12F9DFC818E4C29000A63E1C /* jsons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12F9DFC718E4C29000A63E1C /* jsons.plist */; };
+		12F9DFCB18E53E5600A63E1C /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFCA18E53E5600A63E1C /* FileManager.m */; };
+		12F9DFD118E555D600A63E1C /* EgyptienneFLTStd-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12F9DFD018E555A800A63E1C /* EgyptienneFLTStd-Roman.otf */; };
+		12F9DFD418E5607500A63E1C /* BackpackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFD318E5607500A63E1C /* BackpackItem.m */; };
+		12F9DFD718E56FD000A63E1C /* generalText.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12F9DFD618E56FD000A63E1C /* generalText.plist */; };
 		12FA694918E0D9140049DA58 /* MapBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FA694818E0D9140049DA58 /* MapBoxView.m */; };
 		BCE60ECA424844318066FB4E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A99E17856944428C5571D6 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -81,6 +85,12 @@
 		12F9DFC418E41BC800A63E1C /* QuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionView.h; sourceTree = "<group>"; };
 		12F9DFC518E41BC800A63E1C /* QuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionView.m; sourceTree = "<group>"; };
 		12F9DFC718E4C29000A63E1C /* jsons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = jsons.plist; sourceTree = "<group>"; };
+		12F9DFC918E53E5600A63E1C /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		12F9DFCA18E53E5600A63E1C /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		12F9DFD018E555A800A63E1C /* EgyptienneFLTStd-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EgyptienneFLTStd-Roman.otf"; sourceTree = "<group>"; };
+		12F9DFD218E5607500A63E1C /* BackpackItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackpackItem.h; sourceTree = "<group>"; };
+		12F9DFD318E5607500A63E1C /* BackpackItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackpackItem.m; sourceTree = "<group>"; };
+		12F9DFD618E56FD000A63E1C /* generalText.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = generalText.plist; sourceTree = "<group>"; };
 		12FA694718E0D9140049DA58 /* MapBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapBoxView.h; sourceTree = "<group>"; };
 		12FA694818E0D9140049DA58 /* MapBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapBoxView.m; sourceTree = "<group>"; };
 		41A99E17856944428C5571D6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,12 +161,16 @@
 				12B2E93118E0B49D00E5EB29 /* AppDelegate.m */,
 				12B2E93318E0B49D00E5EB29 /* Images.xcassets */,
 				12B2E92818E0B49D00E5EB29 /* Supporting Files */,
+				12F9DFD518E5608500A63E1C /* models */,
 				12F9DF9F18E2A1E700A63E1C /* 1_startScreen */,
 				12F9DFA018E2A20C00A63E1C /* 2_soldierScreen */,
 				12F9DFA118E2A23000A63E1C /* 3_backpackScreen */,
 				12F9DFA218E2A25100A63E1C /* 4_mapScreen */,
 				12F9DFC018E41AD600A63E1C /* 5_questionScreen */,
+				12F9DFC918E53E5600A63E1C /* FileManager.h */,
+				12F9DFCA18E53E5600A63E1C /* FileManager.m */,
 				12F9DFC718E4C29000A63E1C /* jsons.plist */,
+				12F9DFD618E56FD000A63E1C /* generalText.plist */,
 			);
 			path = "MAIV-IFF";
 			sourceTree = "<group>";
@@ -164,6 +178,7 @@
 		12B2E92818E0B49D00E5EB29 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				12F9DFD018E555A800A63E1C /* EgyptienneFLTStd-Roman.otf */,
 				12F9DFBE18E3F93100A63E1C /* CalcitePro-Regular.otf */,
 				12B2E92918E0B49D00E5EB29 /* MAIV-IFF-Info.plist */,
 				12B2E92A18E0B49D00E5EB29 /* InfoPlist.strings */,
@@ -246,6 +261,15 @@
 			name = 5_questionScreen;
 			sourceTree = "<group>";
 		};
+		12F9DFD518E5608500A63E1C /* models */ = {
+			isa = PBXGroup;
+			children = (
+				12F9DFD218E5607500A63E1C /* BackpackItem.h */,
+				12F9DFD318E5607500A63E1C /* BackpackItem.m */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -323,6 +347,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12F9DFD718E56FD000A63E1C /* generalText.plist in Resources */,
+				12F9DFD118E555D600A63E1C /* EgyptienneFLTStd-Roman.otf in Resources */,
 				12F9DFBF18E3F9D500A63E1C /* CalcitePro-Regular.otf in Resources */,
 				12B2E92C18E0B49D00E5EB29 /* InfoPlist.strings in Resources */,
 				12F9DFC818E4C29000A63E1C /* jsons.plist in Resources */,
@@ -380,6 +406,7 @@
 			files = (
 				12F9DFA518E2A30400A63E1C /* BackpackView.m in Sources */,
 				12F9DFA818E2A31B00A63E1C /* BackpackViewController.m in Sources */,
+				12F9DFD418E5607500A63E1C /* BackpackItem.m in Sources */,
 				12FA694918E0D9140049DA58 /* MapBoxView.m in Sources */,
 				12B2E93218E0B49D00E5EB29 /* AppDelegate.m in Sources */,
 				12F9DF9718E29BEA00A63E1C /* StartViewController.m in Sources */,
@@ -390,6 +417,7 @@
 				12F9DF9A18E2A04D00A63E1C /* SoldierViewController.m in Sources */,
 				12F9DF9418E29A3200A63E1C /* StartView.m in Sources */,
 				12F9DFAB18E2A42000A63E1C /* MapViewController.m in Sources */,
+				12F9DFCB18E53E5600A63E1C /* FileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

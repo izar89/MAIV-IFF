@@ -111,7 +111,6 @@
     CGSize newSize = CGSizeMake(topImage.size.width, topImage.size.height);
     UIGraphicsBeginImageContext(newSize);
     UIGraphicsBeginImageContext( newSize );
-    NSLog(@"%f", newSize.width);
     [bottomImage drawInRect:CGRectMake(newSize.width / 2 - 130, newSize.height / 2 - 100 ,250,250)];
     [topImage drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();

@@ -31,6 +31,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>CalcitePro-Regular.otf</string>
+		<string>EgyptienneFLTStd-Roman.otf</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

@@ -19,7 +19,15 @@
         
         //UI
         self.mapView = [[RMMapView alloc] initWithFrame:self.frame];
-        [self addSubview:self.mapView];
+        RMMapboxSource *source = [[RMMapboxSource alloc] initWithMapID:@"stijnheylen.hkkg4ihk"];
+        source.retryCount = 0;
+        self.mapView.tileSource = source;
+        //mapView = [[RMMapView alloc] initWithFrame:self.view.frame andTilesource:source centerCoordinate:CLLocationCoordinate2DMake(50.8898, 2.8772) zoomLevel:16 maxZoomLevel:16 minZoomLevel:16 backgroundImage:nil];
+        self.mapView = [[RMMapView alloc] initWithFrame:self.frame andTilesource:source];
+        self.mapView.draggingEnabled = NO;
+        self.mapView.zoom = self.mapView.minZoom = self.mapView.maxZoom = 16;
+        self.mapView.centerCoordinate = CLLocationCoordinate2DMake(50.8898, 2.8772);
+        [self insertSubview:self.mapView atIndex:0];
         
         UIImage *headerImage = [UIImage imageNamed:@"header"];
         UIImageView *headerImageView = [[UIImageView alloc] initWithImage:headerImage];
