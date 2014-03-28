@@ -21,9 +21,7 @@
     backpackItem.imageName = [dictionary objectForKey:@"imageName"];
     backpackItem.imageSelectedName = [dictionary objectForKey:@"imageSelectedName"];
     backpackItem.imageDisabledName = [dictionary objectForKey:@"imageDisabledName"];
-
     return backpackItem;
 }
-
 
 @end

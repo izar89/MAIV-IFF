@@ -53,7 +53,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.photoView.image = [FileManager getImageFromDDWithName:@"photo.png"];
-    self.view.txtGeneral.text = [FileManager getStringFromPlistWithName:@"generalText" AndKey:@"backpack_default"];
+    self.view.txtGeneral.text = [FileManager getStringFromPlistWithName:@"text" AndKey:@"backpack_general_default"];
     [self.view.btnDeselect addTarget:self action:@selector(btnDeselectTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view.btnNext addTarget:self action:@selector(btnNextTapped:) forControlEvents:UIControlEventTouchUpInside];
 }
@@ -81,7 +81,7 @@
 
 -(void)btnDeselectTapped:(id)sender{
     self.selectedBtnBackpackItem.selected = NO;
-    self.view.txtGeneral.text = [FileManager getStringFromPlistWithName:@"generalText" AndKey:@"backpack_default"];
+    self.view.txtGeneral.text = [FileManager getStringFromPlistWithName:@"text" AndKey:@"backpack_general_default"];
 }
 
 -(void)btnNextTapped:(id)sender{
