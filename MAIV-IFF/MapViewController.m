@@ -40,8 +40,6 @@
     
     //Turn on the GPS
     [self.locationManager startUpdatingLocation];
-    //[self initializeGPS];
-    
     
     //TODO: DELETE!
     UIImage *btnNextImage = [UIImage imageNamed:@"btnNext"];
@@ -69,7 +67,8 @@
     didUpdateToLocation:(CLLocation *)newLocation
            fromLocation:(CLLocation *)oldLocation
 {
-    NSLog(@"Location: %@", [newLocation description]);
+    //NSLog(@"Location: %@", [newLocation description]);
+    NSLog(@"%g x %g", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
     
     MapBoxView *mapBoxView;
     mapBoxView.mapView.centerCoordinate = newLocation.coordinate; //Werkt nog niet//

@@ -62,6 +62,9 @@
     self.view.photoView.image = [FileManager getImageFromDDWithName:@"photo.png"];
     self.view.txtBackpackInfo.text = [FileManager getStringFromPlistWithName:@"text" AndKey:@"quest_backpack_info"];
     self.view.txtGeneral.text = self.quest.question;
+    
+    //BTN BACK
+    [self.view.btnBack addTarget:self action:@selector(btnBackTapped:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning
@@ -107,7 +110,6 @@
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     if(self.selectedBackpackItemImageViewIndex){
-        
         UITouch *touch = [touches anyObject];
     
         CGPoint positionInView = [touch locationInView:self.view];
@@ -117,13 +119,11 @@
             newPosition = positionInView;
             if(![self checkIfAnswerIsOk]){
                 newPosition = self.originalPosition;
-            } else {
-                self.view.userInteractionEnabled = NO;
-                self.view.txtGeneral.text = self.quest.response;
             }
         } else {
             // Wrong position
             newPosition = self.originalPosition;
+
         }
     
         [UIView animateWithDuration:0.4
@@ -138,14 +138,21 @@
     }
 }
 
+-(void)btnBackTapped:(id)sender{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 -(BOOL)checkIfAnswerIsOk{
     BackpackItem *backpackItem = [self.backpackItems objectAtIndex: [self.selectedBackpackItemImageViewIndex intValue]];
     if(self.quest.backpackItem_identifier == backpackItem.identifier){
+        
         NSLog(@"Juist!");
-        return YES;
+        self.view.txtGeneral.text = self.quest.response;
+        self.view.btnBack.hidden = NO;
+        return true;
     }
     NSLog(@"Fout!");
-    return NO;
+    return false;
 }
 
 @end
