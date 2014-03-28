@@ -88,6 +88,8 @@
             self.selectedBackpackItemImageViewIndex = [NSNumber numberWithInt: [self.backpackItemImageViews indexOfObject:backpackItemImageView]];
             self.originalPosition = backpackItemImageView.center;
             [self.view bringSubviewToFront:backpackItemImageView];
+            
+            self.view.circleImageView.hidden = NO;
         }
     }
 }
@@ -111,6 +113,8 @@
 {
     if(self.selectedBackpackItemImageViewIndex){
         UITouch *touch = [touches anyObject];
+        
+        self.view.circleImageView.hidden = YES;
     
         CGPoint positionInView = [touch locationInView:self.view];
         CGPoint newPosition;
@@ -123,7 +127,6 @@
         } else {
             // Wrong position
             newPosition = self.originalPosition;
-
         }
     
         [UIView animateWithDuration:0.4
