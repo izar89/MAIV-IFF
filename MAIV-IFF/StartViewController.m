@@ -42,11 +42,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    lblLoading = [ [UILabel alloc ] initWithFrame:CGRectMake((self.view.bounds.size.width / 2) - 75, 390.0, 150.0, 43.0) ];
-    lblLoading.textColor = [UIColor blackColor];
-    lblLoading.font = [UIFont fontWithName:@"CalcitePro-Regular" size:(20.0)];
-    lblLoading.text = [NSString stringWithFormat: @"Laden..."];
-    lblLoading.textAlignment = NSTextAlignmentCenter;
+    self.lblLoading = [ [UILabel alloc ] initWithFrame:CGRectMake((self.view.bounds.size.width / 2) - 200, 390.0, 400.0, 43.0) ];
+    self.lblLoading.textColor = [UIColor blackColor];
+    self.lblLoading.font = [UIFont fontWithName:@"CalcitePro-Regular" size:(20.0)];
+    self.lblLoading.text = [NSString stringWithFormat: @"bezig met laden..."];
+    self.lblLoading.textAlignment = NSTextAlignmentCenter;
+    self.lblLoading.alpha = 0.45;
+    
     [self.view addSubview:lblLoading];
     
     [self cacheMap];
@@ -158,7 +160,8 @@
 -(void)checkIfloadingIsDone{
     if(self.jsonsLoaded){ //&& self.mapCacheLoaded
         [self.view.btnStart setEnabled:YES];
-        [lblLoading removeFromSuperview];
+        //[lblLoading removeFromSuperview];
+        self.lblLoading.text = [NSString stringWithFormat: @"klaar met laden. tik op het scherm"];
         NSLog(@"Loading done");
     }
 }

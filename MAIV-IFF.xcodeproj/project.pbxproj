@@ -351,7 +351,6 @@
 				12F9DFD118E555D600A63E1C /* EgyptienneFLTStd-Roman.otf in Resources */,
 				12F9DFBF18E3F9D500A63E1C /* CalcitePro-Regular.otf in Resources */,
 				12B2E92C18E0B49D00E5EB29 /* InfoPlist.strings in Resources */,
-				12F9DFC818E4C29000A63E1C /* jsons.plist in Resources */,
 				12B2E93418E0B49D00E5EB29 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
