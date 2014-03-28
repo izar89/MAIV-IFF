@@ -21,7 +21,7 @@
         UIImageView *headerImageView = [[UIImageView alloc] initWithImage:headerImage];
         [self addSubview:headerImageView];
         
-        UIImage *btnNextImage = [UIImage imageNamed:@"btnNext2"];
+        UIImage *btnNextImage = [UIImage imageNamed:@"btnNext"];
         self.btnNext = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.btnNext setBackgroundImage:btnNextImage forState:UIControlStateNormal];
         self.btnNext.frame = CGRectMake(0, 0, btnNextImage.size.width, btnNextImage.size.height);
