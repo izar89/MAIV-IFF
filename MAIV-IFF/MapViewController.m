@@ -51,6 +51,15 @@
     [self.view addSubview:btnNext];
     
     [self loadQuests];
+    [self initializeGPS];
+}
+
+//Init GPS
+- (void) initializeGPS
+{
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    [self.locationManager startUpdatingLocation];
 }
 
 -(void)loadQuests{
