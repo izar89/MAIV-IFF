@@ -13,9 +13,11 @@
 @property(nonatomic)BOOL jsonsLoaded;
 @property(nonatomic)BOOL mapCacheLoaded;
 
+
 @end
 
 @implementation StartViewController
+@synthesize lblLoading;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,6 +41,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    lblLoading = [ [UILabel alloc ] initWithFrame:CGRectMake((self.view.bounds.size.width / 2) - 75, 390.0, 150.0, 43.0) ];
+    lblLoading.textColor = [UIColor blackColor];
+    lblLoading.font = [UIFont fontWithName:@"CalcitePro-Regular" size:(20.0)];
+    lblLoading.text = [NSString stringWithFormat: @"Loading..."];
+    lblLoading.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:lblLoading];
     
     [self cacheMap];
 }
@@ -149,6 +158,7 @@
 -(void)checkIfloadingIsDone{
     if(self.jsonsLoaded && self.mapCacheLoaded){
         [self.view.btnStart setEnabled:YES];
+        [lblLoading removeFromSuperview];
         NSLog(@"Loading done");
     }
 }

@@ -15,5 +15,6 @@
 @interface StartViewController : UIViewController<RMTileCacheBackgroundDelegate>
 
 @property(strong, nonatomic)StartView *view;
+@property (strong, nonatomic) IBOutlet UILabel *lblLoading;
 
 @end
