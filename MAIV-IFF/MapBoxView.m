@@ -19,7 +19,7 @@
         
         //UI
         self.mapView = [[RMMapView alloc] initWithFrame:self.frame];
-        RMMapboxSource *source = [[RMMapboxSource alloc] initWithMapID:@"stijnheylen.hkkg4ihk"];
+        RMMapboxSource *source = [[RMMapboxSource alloc] initWithMapID:@"stijnheylen.hl3k0h1i"];
         source.retryCount = 0;
         self.mapView.tileSource = source;
         //mapView = [[RMMapView alloc] initWithFrame:self.view.frame andTilesource:source centerCoordinate:CLLocationCoordinate2DMake(50.8898, 2.8772) zoomLevel:16 maxZoomLevel:16 minZoomLevel:16 backgroundImage:nil];
