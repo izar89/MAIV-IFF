@@ -37,7 +37,6 @@
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     
-    
     //Turn on the GPS
     [self.locationManager startUpdatingLocation];
     
@@ -72,15 +71,11 @@
     self.selectedQuest = [self.quests objectAtIndex:0];
 }
 
-- (void)locationManager:(CLLocationManager *)manager
-    didUpdateToLocation:(CLLocation *)newLocation
-           fromLocation:(CLLocation *)oldLocation
-{
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     //NSLog(@"Location: %@", [newLocation description]);
     NSLog(@"%g x %g", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
     
-    MapBoxView *mapBoxView;
-    mapBoxView.mapView.centerCoordinate = newLocation.coordinate; //Werkt nog niet//
+    self.view.mapView.centerCoordinate = newLocation.coordinate; //Werkt nog niet//
 }
 
 - (void)locationManager:(CLLocationManager *)manager

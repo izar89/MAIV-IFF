@@ -26,8 +26,9 @@
         self.mapView = [[RMMapView alloc] initWithFrame:self.frame andTilesource:source];
         self.mapView.draggingEnabled = NO;
         self.mapView.zoom = self.mapView.minZoom = self.mapView.maxZoom = 16;
-        self.mapView.centerCoordinate = CLLocationCoordinate2DMake(50.8898, 2.8772);
+        
         [self insertSubview:self.mapView atIndex:0];
+        self.mapView.centerCoordinate = CLLocationCoordinate2DMake(50.8898, 2.8772);
         
         UIImage *headerImage = [UIImage imageNamed:@"header"];
         UIImageView *headerImageView = [[UIImageView alloc] initWithImage:headerImage];
@@ -42,6 +43,16 @@
         UIImageView *compasImageView = [[UIImageView alloc] initWithImage:compasImage];
         compasImageView.center = CGPointMake((self.frame.size.width / 2), self.frame.size.height - compasImage.size.height / 2);
         [self addSubview:compasImageView];
+        
+        UIImage *mapMarkerImage = [UIImage imageNamed:@"map_marker"];
+        UIImageView *mapMarkerImageView = [[UIImageView alloc] initWithImage:mapMarkerImage];
+        mapMarkerImageView.center = CGPointMake(self.frame.size.width / 2 + 45, self.frame.size.height / 2 -74);
+        [self addSubview:mapMarkerImageView];
+        
+        UIImageView *photoView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 98, 100)];
+        photoView.image = [FileManager getImageFromDDWithName:@"photo.png"];
+        photoView.center = CGPointMake(self.frame.size.width / 2 + 1, self.frame.size.height /2 - 86);
+        [self addSubview:photoView];
     }
     return self;
 }

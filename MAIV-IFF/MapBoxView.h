@@ -10,6 +10,7 @@
 #import "RMMapView.h"
 #import "RMMapBoxSource.h"
 #import "RMTileCache.h"
+#import "FileManager.h"
 
 @interface MapBoxView : UIView
 
