@@ -74,7 +74,7 @@
 }
 
 -(void)cacheMap{
-    RMMapboxSource *source = [[RMMapboxSource alloc] initWithMapID:@"stijnheylen.hkkg4ihk"];
+    RMMapboxSource *source = [[RMMapboxSource alloc] initWithMapID:@"stijnheylen.hl3k0h1i"];
     source.retryCount = 3;
     RMMapView *mapView = [[RMMapView alloc] initWithFrame:self.view.bounds andTilesource:source];
     //mapView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;

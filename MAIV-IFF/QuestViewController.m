@@ -94,17 +94,19 @@
 
 -(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    UITouch *touch = [touches anyObject];
-    CGPoint position = [touch locationInView: self.view];
-    
-    [UIView animateWithDuration:.001
-                          delay:0.0
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^ {
-                         UIImageView *backpackItemImageView = [self.backpackItemImageViews objectAtIndex:[self.selectedBackpackItemImageViewIndex intValue]];
-                         backpackItemImageView.center = CGPointMake(position.x+_touchOffset.x, position.y+_touchOffset.y);
-                     }
-                     completion:^(BOOL finished) {}];
+     if(self.selectedBackpackItemImageViewIndex){
+         UITouch *touch = [touches anyObject];
+         CGPoint position = [touch locationInView: self.view];
+         
+         [UIView animateWithDuration:.001
+                               delay:0.0
+                             options:UIViewAnimationOptionCurveEaseInOut
+                          animations:^ {
+                              UIImageView *backpackItemImageView = [self.backpackItemImageViews objectAtIndex:[self.selectedBackpackItemImageViewIndex intValue]];
+                              backpackItemImageView.center = CGPointMake(position.x+_touchOffset.x, position.y+_touchOffset.y);
+                          }
+                          completion:^(BOOL finished) {}];
+     }
 }
 
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
