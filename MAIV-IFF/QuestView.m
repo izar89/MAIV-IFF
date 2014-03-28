@@ -50,6 +50,11 @@
         [self.btnBack setBackgroundImage:btnBackImage forState:UIControlStateNormal];
         self.btnBack.frame = CGRectMake(0, 0, btnBackImage.size.width, btnBackImage.size.height);
         self.btnBack.center = CGPointMake((self.frame.size.width / 2), 300);
+        
+        UIImage *circleImage = [UIImage imageNamed:@"circle"];
+        UIImageView *circleImageView = [[UIImageView alloc] initWithImage:circleImage];
+        circleImageView.center = CGPointMake(575, 375);
+        [self addSubview:circleImageView];
     }
     return self;
 }
