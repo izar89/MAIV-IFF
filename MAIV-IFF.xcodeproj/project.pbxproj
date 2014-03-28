@@ -29,7 +29,6 @@
 		12F9DFBF18E3F9D500A63E1C /* CalcitePro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12F9DFBE18E3F93100A63E1C /* CalcitePro-Regular.otf */; };
 		12F9DFC318E41BB600A63E1C /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFC218E41BB600A63E1C /* QuestionViewController.m */; };
 		12F9DFC618E41BC800A63E1C /* QuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFC518E41BC800A63E1C /* QuestionView.m */; };
-		12F9DFC818E4C29000A63E1C /* jsons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12F9DFC718E4C29000A63E1C /* jsons.plist */; };
 		12F9DFCB18E53E5600A63E1C /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFCA18E53E5600A63E1C /* FileManager.m */; };
 		12F9DFD118E555D600A63E1C /* EgyptienneFLTStd-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12F9DFD018E555A800A63E1C /* EgyptienneFLTStd-Roman.otf */; };
 		12F9DFD418E5607500A63E1C /* BackpackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F9DFD318E5607500A63E1C /* BackpackItem.m */; };
@@ -351,7 +350,6 @@
 				12F9DFD118E555D600A63E1C /* EgyptienneFLTStd-Roman.otf in Resources */,
 				12F9DFBF18E3F9D500A63E1C /* CalcitePro-Regular.otf in Resources */,
 				12B2E92C18E0B49D00E5EB29 /* InfoPlist.strings in Resources */,
-				12F9DFC818E4C29000A63E1C /* jsons.plist in Resources */,
 				12B2E93418E0B49D00E5EB29 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
