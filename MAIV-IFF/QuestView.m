@@ -55,6 +55,9 @@
         UIImageView *circleImageView = [[UIImageView alloc] initWithImage:circleImage];
         circleImageView.center = CGPointMake(575, 375);
         [self addSubview:circleImageView];
+
+        self.btnBack.hidden = YES;
+        [self addSubview:self.btnBack];
     }
     return self;
 }
